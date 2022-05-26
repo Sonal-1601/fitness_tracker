@@ -53,19 +53,41 @@ class _WelcomePageState extends State<WelcomePage> {
                 width: 300,
 
               ),
-
-              FloatingActionButton(
-                onPressed: () {
+              InkWell(
+                onTap: (){
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => Dashboard()),
                   );
-
-
                 },
-                backgroundColor: Colors.white,
-                child: const Icon(Icons.arrow_forward_ios_rounded),
+                child:Container(
+                    height:60,
+                    width:315,
+                    decoration:BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        gradient: LinearGradient(
+                          begin: Alignment.centerRight,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            Color(0xff92A3FD),
+                            Color(0xff9DCEFF),
+                          ],
+                        )
+
+
+
+                    ),
+                    child: Center(
+                      child: Text('Go to home',style: TextStyle(
+                          color:Colors.white,
+                          fontSize: 20
+
+                      ),),
+                    )
+                ),
               ),
+
+
             ],
           ),
 
