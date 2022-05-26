@@ -14,7 +14,7 @@ class _WelcomePageState extends State<WelcomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        //crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
               height:430,
@@ -47,48 +47,42 @@ class _WelcomePageState extends State<WelcomePage> {
             height: 100,
           ),
 
-          Row(
-            children: [
-              SizedBox(
-                width: 300,
+          SizedBox(
+            width: 300,
 
-              ),
-              InkWell(
-                onTap: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Dashboard()),
-                  );
-                },
-                child:Container(
-                    height:60,
-                    width:315,
-                    decoration:BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        gradient: LinearGradient(
-                          begin: Alignment.centerRight,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            Color(0xff92A3FD),
-                            Color(0xff9DCEFF),
-                          ],
-                        )
-
-
-
-                    ),
-                    child: Center(
-                      child: Text('Go to home',style: TextStyle(
-                          color:Colors.white,
-                          fontSize: 20
-
-                      ),),
+          ),
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Dashboard()),
+              );
+            },
+            child:Container(
+                height:60,
+                width:315,
+                decoration:BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    gradient: LinearGradient(
+                      begin: Alignment.centerRight,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Color(0xff92A3FD),
+                        Color(0xff9DCEFF),
+                      ],
                     )
+
+
+
                 ),
-              ),
+                child: Center(
+                  child: Text('Go to home',style: TextStyle(
+                      color:Colors.white,
+                      fontSize: 20
 
-
-            ],
+                  ),),
+                )
+            ),
           ),
 
         ],

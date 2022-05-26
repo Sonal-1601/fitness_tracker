@@ -19,10 +19,48 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                children: [
-                  Text('Fitness')
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5,vertical: 210),
+                child: Container(
+                  child: Column(
+                    children: [
+                      Row(
+                          children: [
+                            Text('Fitness',style: TextStyle(
+                              color: Color(0xff92A3FD),
+                              fontSize: 55
+                            ),),
+                            Text('XR',style: TextStyle(
+                                color: Colors.grey.shade500,
+                                fontSize: 60
+                            ),)
+                          ],
+                        ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 45,vertical:0),
+                        child: Row(
+                          children: [
+                            Text('One step towards better health!',
+                              style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 12
+
+                              )
+                              ,)
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+
+
+              SizedBox(
+
+                height:25
+
               ),
               InkWell(
                 onTap: (){
