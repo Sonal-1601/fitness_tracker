@@ -63,7 +63,7 @@ class _WelcomePageState extends State<WelcomePage> {
 
 
                 },
-                backgroundColor: Color(0xff92A3FD),
+                backgroundColor: Colors.white,
                 child: const Icon(Icons.arrow_forward_ios_rounded),
               ),
             ],
